@@ -7,11 +7,11 @@
 }
 .container{
     background: hsl(36, 100%, 99%);
-    width: 80%;
+    width: 85%;
     max-width: 1440px;
     margin: 2em auto;
     display: grid;
-    gap: 3rem;
+    gap: 2rem;
     grid-template-columns: repeat(3,1fr);
 }
 .container .head{
