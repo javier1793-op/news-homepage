@@ -99,9 +99,44 @@ main .section__new button:hover{
     border-bottom: 1px solid hsl(236, 13%, 42%);
     padding-bottom: 2rem;
 }
+.content__new .article__news h3:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
 .content__new .article__news:nth-child(3){
     border-bottom: none;
 }
 .content__new .article__news span{
     color: hsl(233, 8%, 79%);
+}
+.container .related__post{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.related__post img{
+    width: 200px;
+    height: 150px;
+}
+.related__post .content__related_post{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+    font-size: 15px;
+}
+.content__related_post h2{
+    color: hsl(233, 8%, 79%);
+    font-size: 30px;
+}
+.content__related_post h3{
+    color: hsl(236, 13%, 42%);
+}
+.content__related_post h3:hover{
+    color:hsl(5, 85%, 63%) ;
+    cursor: pointer;
+}
+.content__related_post span{
+    color: hsl(236, 13%, 42%);
+    line-height: 1.5rem;
 }
