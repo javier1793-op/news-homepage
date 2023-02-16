@@ -38,6 +38,75 @@
     color: hsl(5, 85%, 63%);
     cursor: pointer;
 }
+.head .menu__active{
+    display: none;
+}
+.head.active .menu__active{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+    left: 0;
+    min-width: 150%;
+}
+.head.active .menu__active ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    list-style: none;
+    font-size: 15px;
+    transition: .3s all ease;
+}
+.head.active .menu__active ul li:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+.head .menutoggle{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+    justify-content: end;
+    padding: 2rem 1rem;
+}
+.head.active .menutoggle{
+    position: absolute;
+    width: 80%;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    cursor: pointer;
+    display: flex;
+    background: #fff;
+    transition: .5s all ease;
+}
+.head .menutoggle::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #555;
+    transform: translateY(-10px);
+    box-shadow: 0 10px #555;
+    transition: .5s;
+}
+.head.active .menutoggle::before{
+    transform: translateY(0) rotate(45deg);
+    box-shadow: 0 0 #555;
+}
+.head .menutoggle::after{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #555;
+    transform: translateY(+10px);
+    transition: .5s;
+}
+.head.active .menutoggle::after{
+    transform: translateY(0) rotate(-45deg);
+}
 main{
     grid-column: span 2;
     display: grid;
@@ -167,31 +236,7 @@ main .section__new button:hover{
     .container .related__post{
         grid-column: 1/-1;
     }
-}
-@media screen and (max-width: 760px){
-   
-    .container{
-        width: 90%;
-    }
-    .container .menu{
-        display: none;
-    }
-    main{
-       grid-column: 1/-1;
-    }
-    main img{
-        grid-column: span 2;
-    }
-    main h1{
-        grid-column: span 2;
-    }
-    main .section__new {
-        grid-column: span 2;
-    }
-    .container .article{
-      grid-column: 1/-1;
-    }
-    .container .related__post{
-        grid-column: 1/-1;
+    .head .menutoggle{
+        display: flex;
     }
 }

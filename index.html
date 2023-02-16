@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
     <link
       rel="icon"
       type="image/png"
@@ -15,21 +14,32 @@
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
-    
     <div class="container">
       <div class="head">
-      <span>W.</span>
-      <div class="menu">
-        <ul>
-        <li>Home</li>
-        <li>New</li>
-        <li>Popular</li>
-        <li>Trending</li>
-        <li>Categories</li>
-      </ul>
+        <span>
+          <img src="./assets/images/logo.svg" alt="logotipo__page">
+        </span>
+        <div class="menu">
+          <ul>
+            <li>Home</li>
+            <li>New</li>
+            <li>Popular</li>
+            <li>Trending</li>
+            <li>Categories</li>
+          </ul>
+        </div>
+        <div class="menutoggle">
+          <div class="menu__active">
+            <ul>
+              <li>Home</li>
+              <li>New</li>
+              <li>Popular</li>
+              <li>Trending</li>
+              <li>Categories</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      
-     </div>
       <main>
         <img
           src="./assets/images/image-web-3-desktop.jpg"
@@ -39,10 +49,10 @@
         <div class="section__new">
           <p>
             We dive into the next evolution of the web that claims to put the
-          power of the platforms back into the hands of the people. But is it
-          really fulfilling its promise?
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
           </p>
-          
+
           <button>READ MORE</button>
         </div>
       </main>
@@ -51,23 +61,28 @@
           <h2>New</h2>
         </div>
         <div class="content__new">
-           <div class="article__news">
-          <h3>Hydrogen VS Electric Cars</h3>
-          <span>Will hydrogen-fueled cars ever catch up to EVs?</span>
+          <div class="article__news">
+            <h3>Hydrogen VS Electric Cars</h3>
+            <span>Will hydrogen-fueled cars ever catch up to EVs?</span>
+          </div>
+          <div class="article__news">
+            <h3>The Downsides of Al Artistry</h3>
+            <span
+              >What are the possible adverse affects of on-demand Al image
+              generation?</span
+            >
+          </div>
+          <div class="article__news">
+            <h3>Is VC Funding Drying Up?</h3>
+            <span
+              >Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.</span
+            >
+          </div>
         </div>
-        <div class="article__news">
-          <h3>The Downsides of Al Artistry</h3>
-          <span>What are the possible adverse affects of on-demand Al image generation?</span>
-        </div>
-        <div class="article__news">
-          <h3>Is VC Funding Drying Up?</h3>
-          <span>Private funding by VC firms is down 50% YOY. We take a look at what that means.</span>
-        </div>
-        </div>
-       
       </section>
       <div class="related__post">
-        <img src="./assets/images/image-retro-pcs.jpg" alt="img_retro_pc">
+        <img src="./assets/images/image-retro-pcs.jpg" alt="img_retro_pc" />
         <div class="content__related_post">
           <h2>01</h2>
           <h3>Reviven retro PCs</h3>
@@ -75,7 +90,10 @@
         </div>
       </div>
       <div class="related__post">
-        <img src="./assets/images/image-top-laptops.jpg" alt="img_laptos_post">
+        <img
+          src="./assets/images/image-top-laptops.jpg"
+          alt="img_laptos_post"
+        />
         <div class="content__related_post">
           <h2>02</h2>
           <h3>Top 10 Laptops of 2022</h3>
@@ -83,7 +101,7 @@
         </div>
       </div>
       <div class="related__post">
-        <img src="./assets/images/image-gaming-growth.jpg" alt="img_retro_pc">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="img_retro_pc" />
         <div class="content__related_post">
           <h2>03</h2>
           <h3>The Growth of Gaming</h3>
@@ -92,4 +110,13 @@
       </div>
     </div>
   </body>
+  <script>
+    let menuHead = document.querySelector('.head');
+    let menuToggle = document.querySelector('.menutoggle');
+
+    menuToggle.onclick = function () {
+      menuHead.classList.toggle('active')
+    }
+  </script>
 </html>
+ 
