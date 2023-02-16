@@ -240,3 +240,33 @@ main .section__new button:hover{
         display: flex;
     }
 }
+@media screen and (max-width: 900px){
+   
+    .container{
+        width: 90%;
+    }
+    .container .menu{
+        display: none;
+    }
+    main{
+       grid-column: 1/-1;
+    }
+    main img{
+        grid-column: span 2;
+    }
+    main h1{
+        grid-column: span 2;
+    }
+    main .section__new {
+        grid-column: span 2;
+    }
+    .container .article{
+      grid-column: 1/-1;
+    }
+    .container .related__post{
+        grid-column: 1/-1;
+    }
+    .head .menutoggle{
+        display: flex;
+    }
+}
