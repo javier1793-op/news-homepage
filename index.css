@@ -25,6 +25,7 @@
     font-weight: 700;
     font-size: 3rem;
 }
+
 .head .menu ul{
     display: flex;
     align-items: center;
@@ -65,10 +66,10 @@
     position: relative;
     width: 50px;
     height: 50px;
-    cursor: pointer;
     display: none;
     justify-content: end;
     padding: 2rem 1rem;
+    cursor: pointer;
 }
 .head.active .menutoggle{
     position: absolute;
@@ -76,10 +77,9 @@
     top: 0;
     right: 0;
     min-height: 100vh;
-    cursor: pointer;
-    display: flex;
     background: #fff;
     transition: .5s all ease;
+    cursor: auto;
 }
 .head .menutoggle::before{
     content: '';
